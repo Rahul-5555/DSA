@@ -42,7 +42,7 @@ console.log("length of the array", length) // 7
 // console.log(arr[0])
 // console.log(arr[1])
 // console.log(arr[2])  same thing we can do using for loop
-for(let i =0 ; i < length; i++) {
+for (let i = 0; i < length; i++) {
   console.log(arr[i])
 }
 
