@@ -1,18 +1,17 @@
-function SecondlargestNumber(arr) {
-  let firstL = -Infinity;
-  let secondL= -Infinity;
-  for(i=0; i<arr.length; i++) {
-    if(arr[i] > firstL) {
-      secondL = firstL
-      firstL = arr[i]
-    }
-    else if(arr[i] > secondL) {
-      secondL = arr[i]
-    }
+
+function isPalindrome(x) {
+  if (x < 0) return false;
+  let xCopy = x;
+  let rev = 0;
+
+  while (x > 0) {
+    let rem = x % 10; // 
+    rev = (10 * rev) + rem;
+    x = Math.floor(x / 10);
   }
-  return secondL;
+  return rev === xCopy;
 }
 
-let arr = [2,23,12,14]
-let res = SecondlargestNumber(arr)
-console.log(res)
+let x = 1211;
+let result = isPalindrome(x);
+console.log(result);
