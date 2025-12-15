@@ -1,17 +1,16 @@
 
-function isPalindrome(x) {
-  if (x < 0) return false;
-  let xCopy = x;
-  let rev = 0;
-
-  while (x > 0) {
-    let rem = x % 10; // 
-    rev = (10 * rev) + rem;
-    x = Math.floor(x / 10);
+function removeDuplicates(nums) {
+  let x = 0;
+  for (i=0; i<nums.length;i++){
+    if(nums[i] > nums[x] ) {
+      x = x + 1;
+      nums[x] = nums[i]
+    }
   }
-  return rev === xCopy;
+  return x + 1;
 }
 
-let x = 1211;
-let result = isPalindrome(x);
+let nums = [2, 2, 3, 3, 4, 4]
+
+let result = removeDuplicates(nums);
 console.log(result);

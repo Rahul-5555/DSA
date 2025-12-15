@@ -24,7 +24,7 @@ var isPalindrome = function (x) {
   // }
   return rev === xCopy;
 }
-
+ 
 let x = 1211;
 let result = isPalindrome(x);
 console.log(result);
