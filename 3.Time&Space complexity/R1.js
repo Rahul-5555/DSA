@@ -87,19 +87,33 @@ Bas bolo friend 😄
 
 var removeDuplicates = function (nums) {
 
+  // x pointer:
+  // Ye last unique element ka index store karta hai
   let x = 0;
-  for (i = 0; i < nums.length; i++) {
+
+  // Loop poore array par chalega
+  for (let i = 0; i < nums.length; i++) {
+
+    // Kyunki array sorted hai:
+    // Agar current element > last unique element
+    // matlab hume ek naya unique number mila
     if (nums[i] > nums[x]) {
+
+      // Unique index ko aage badhao
       x = x + 1;
+
+      // New unique element ko us position par place karo
       nums[x] = nums[i];
     }
   }
+
+  // x index hai, isliye total unique elements = x + 1
   return x + 1;
 }
+let nums = [2, 2, 3, 3, 4, 4]
 
-let nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
-let res = removeDuplicates(nums)
-console.log(res)
+let result = removeDuplicates(nums);
+console.log(result);
 
 
 
