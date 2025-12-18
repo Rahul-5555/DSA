@@ -31,7 +31,7 @@ console.log(nums.slice(0, res)); // [2, 1, 5, 4, 8]
 
 // ### Problem kya hai ?
 
-// * Array se ** given value(`val`) ko remove ** karna hai
+// * Array se ** given value(`val`) ko remove ** kana hai
 //   * New array nahi banana
 //     * Sirf ** count return** karna hai
 
