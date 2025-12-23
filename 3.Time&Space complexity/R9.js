@@ -1,5 +1,5 @@
 var MissingSum = function (arr) {
-  let n = arr.length // calculating length of arr n
+  let n = arr.length // calculating length of arr n = 4
   let totalSum = n * (n + 1) / 2; // formula for sum of first n natural numbers
   let partialSum = 0; // initializing partialSum to 0
 
@@ -23,7 +23,7 @@ Let's **dry run step-by-step** 👇
 
 ## **Code**
 
-```js
+```js  
 var MissingSum = function (arr) {
   let n = arr.length
   let totalSum = n * (n + 1) / 2;
