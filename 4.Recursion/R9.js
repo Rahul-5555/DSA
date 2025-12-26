@@ -11,5 +11,5 @@ function linearSearch(arr,target){
   return -1;
 }
 
-let result = linearSearch(arr,7)
+let result = linearSearch(arr,11)
 console.log(result)
