@@ -1,3 +1,5 @@
+// bubble sort
+
 let arr = [5, 4, 9, 11, 1, 0]
 
 function bubbleSort(arr) {
