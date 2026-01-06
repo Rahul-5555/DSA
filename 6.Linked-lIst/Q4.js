@@ -46,6 +46,8 @@ var isPalindrome = function (head) {
     }
     firstList = firstList.next;
     secondList = secondList.next;
+    console.log(firstList.val, secondList.val);
+
   }
   return true;
 }
@@ -83,3 +85,4 @@ console.log(isPalindrome(head4)); // true
 // Test Case 5: Two Nodes (Not Palindrome)
 let head5 = createLinkedList([1, 2]);
 console.log(isPalindrome(head5)); // false
+
