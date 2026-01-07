@@ -1,4 +1,11 @@
 // leetcode 203:- remove elements from linked list?
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
 
 var removeElement = function (head, val) {
 
