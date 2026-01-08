@@ -3,7 +3,7 @@
 var removeNthFromEnd = function (head, n) {
   // add sentinel node at start
   let sentinel = new ListNode();
-  sentinel = head;
+  sentinel.next = head;
 
   // move my first pointer ahead by n
   let first = sentinel;
@@ -18,4 +18,19 @@ var removeNthFromEnd = function (head, n) {
   // just delete second next
   second.next = second.next.next;
   return sentinel.next;
+  
+
 }
+
+
+/*
+🧠 Core Idea (Two Pointer Technique)
+
+First pointer ko aage bhejo n steps
+
+Second pointer ko start se chalao
+
+Jab first last node par pahunch jaye,
+tab second us node ke just pehle hota hai jise delete karna hai
+
+*/
