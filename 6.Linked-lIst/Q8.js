@@ -1,25 +1,27 @@
 // remove nth node from end of the linked list?
 
 var removeNthFromEnd = function (head, n) {
-  // add sentinel node at start
+  // (1️⃣ Dummy / sentinel node) add sentinel node at start
   let sentinel = new ListNode();
   sentinel.next = head;
 
-  // move my first pointer ahead by n
+  // (2️⃣ First pointer ko n steps aage le jao) move my first pointer ahead by n
   let first = sentinel;
   for (i = 0; i < n; i++) {
     first = first.next;
   }
-  // move both pointer untill first pointer reaches to the last node
+  //(3️⃣ Second pointer start se) move both pointer untill first pointer reaches to the last node
   let second = sentinel;
+
+  // 4️⃣ Dono ko saath chalao
   while (first.next) {
     second = second.next;
   }
   // just delete second next
   second.next = second.next.next;
-  return sentinel.next;
-  
 
+  // 6️⃣ New head return
+  return sentinel.next;
 }
 
 
