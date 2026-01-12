@@ -1,6 +1,6 @@
-//  Rotate list 
+//  Swap Nodes in Pairs 
 
-var rotateRight = function (head, k) {
+var swapPairs = function (head, k) {
   // step1: corner cases head is null or has only one node
   if (!head || !head.next) return head;
 
