@@ -1,13 +1,16 @@
-// solving recursively
-
 var swapPairs = function (head) {
+  // Base case: empty list or only one node
   if (!head || !head.next) return head;
 
-  let l = head;
-  let r = head.next;
+  let first = head;        // first node of the pair
+  let second = head.next; // second node of the pair
 
-  l.next = swapPairs(r.next)
-  r.next = l;
+  // Recursively swap remaining list
+  first.next = swapPairs(second.next);
 
-  return r;
-}
+  // Swap current pair
+  second.next = first;
+
+  // New head after swap
+  return second;
+};
