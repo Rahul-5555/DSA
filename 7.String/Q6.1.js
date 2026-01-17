@@ -18,7 +18,7 @@ var maxFreqSum = function (s) {
   let vovels = ["a", "e", "i", "o", "u"]
   let maxVovel = 0;
   let maxConsonant = 0;
-  let mapKeys = Object.keys(map);
+  let mapKeys = Object.keys(map); // Now we loop only unique characters, not full string again.
   for (let i = 0; i < mapKeys.length; i++) {
     // vovel
     if (vovels.includes(mapKeys[i])) {
@@ -37,3 +37,10 @@ var maxFreqSum = function (s) {
   }
   return maxConsonant + maxVovel;
 }
+
+
+/*
+🧠 Interview One-liner (Gold)
+
+“I used a hashmap to count character frequencies, then iterated over unique characters to compute the maximum vowel and consonant frequencies efficiently.”
+*/
