@@ -1,31 +1,17 @@
 
-var lengthOfLastWord = function (s) {
-  // 🟢 STEP 1: Start from the last character
-  let n = s.length - 1; // n points to the last index of the string
+var numJewelsInStone = function (jewels, stones) {
+  let jSet = new Set();
 
-  // 🟢 STEP 2: Remove trailing spaces
-  // n = 7, s[n] = ' ' 
-  while (n >= 0) {
-    if (s[n] === " ") {
-      --n;
-    } else {
-      break;
-    }
+  for (let i = 0; i < jewels.length; i++) {
+    jSet.add(jewels[i]);
   }
-  // Now, n points to the last character of the last word
-  // STEP 3: Count the characters of the last word
+
   let count = 0;
-  while (n >= 0) {
-    if (s[n] != " ") {
-      --n;
+  for (let i = 0; i < stones.length; i++) {
+    if (jSet.has(stones[i])) {
       ++count;
-    }
-    else {
-      break;
     }
   }
   return count;
 }
 
-let s = "Hello World   ";
-console.log(lengthOfLastWord(s)); // Output: 5
