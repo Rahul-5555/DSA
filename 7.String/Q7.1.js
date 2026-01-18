@@ -10,7 +10,6 @@ var balancedStringSplit = function (s) {
     else {
       --temp;
     }
-
     if (temp === 0) {
       ++count;
     }
