@@ -10,5 +10,5 @@ var lengthOfLastWord = function (s) {
   return s[s.length - 1].length;
 }
 
-let s = "Hello World";
+let s = "Hello World   ";
 console.log(lengthOfLastWord(s));

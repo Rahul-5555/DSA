@@ -5,7 +5,7 @@
 
 var lengthOfLastWord = function (s) {
   // trim all spaces at the end
-  let n = s.length - 1; // start from last charcter
+  let n = s.length - 1; // start from last character
   while (n >= 0) {
     if (s[n] != " ") {
       break;
