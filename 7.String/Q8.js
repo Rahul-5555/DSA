@@ -20,6 +20,3 @@ var reverseStr = function (s, k) {
   return s.join("")
 }
 
-// let s = "hello"
-// console.log(s)
-// reverseStr(s, 2)
