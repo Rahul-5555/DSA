@@ -1,17 +1,13 @@
+var isPalindrome = function(s){
+  s = s.toLowerCase();
+  let filtereString = "";
+  let rev = "";
 
-var numJewelsInStone = function (jewels, stones) {
-  let jSet = new Set();
-
-  for (let i = 0; i < jewels.length; i++) {
-    jSet.add(jewels[i]);
-  }
-
-  let count = 0;
-  for (let i = 0; i < stones.length; i++) {
-    if (jSet.has(stones[i])) {
-      ++count;
+  for(let i=0; i<s.length;i++){
+    if(s[i].match(/[a-z0-9]/)){
+      filtereString = filtereString + s[i];
+      rev = s[i] + rev;
     }
   }
-  return count;
+  return filtereString === rev;
 }
-
