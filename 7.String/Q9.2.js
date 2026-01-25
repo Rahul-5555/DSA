@@ -1,4 +1,4 @@
-// leetcode 125: find a string is palindrome or not without using extra space?
+// LeetCode 125: Check if a string is a palindrome or not without using extra space.
 
 var isPalindrome = function (s) {
   s = s.toLowerCase();
