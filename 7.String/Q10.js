@@ -1,4 +1,4 @@
-// leetcode 1903: Largest Odd Number in String 
+// LeetCode 1903: Find the largest odd number in a string. 
 var largestOddNumber = function (num) {
   let n = num.length - 1;
   while (n >= 0) {
@@ -11,4 +11,4 @@ var largestOddNumber = function (num) {
 }
 
 // Example usage:
-console.log(largestOddNumber("524532"));
+console.log(largestOddNumber("523246"));

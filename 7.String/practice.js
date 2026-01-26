@@ -1,13 +1,10 @@
-var isPalindrome = function(s){
-  s = s.toLowerCase();
-  let filtereString = "";
-  let rev = "";
-
-  for(let i=0; i<s.length;i++){
-    if(s[i].match(/[a-z0-9]/)){
-      filtereString = filtereString + s[i];
-      rev = s[i] + rev;
+var ln = function(num){
+  n = num.length -1;
+  while(n>=0){
+    if(num[n]% 2 !==0){
+      return num.substring(0,n+1);
     }
+    n--;
   }
-  return filtereString === rev;
+  return ""
 }
