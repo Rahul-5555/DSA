@@ -14,7 +14,7 @@
 
 lengthOfLastWord = function (s) {
   let n = s.length - 1; // n points to the last character of the string
-
+  console.log("n",n)
   let count = 0;
   while (n >= 0) {
     if (s[n] != " ") { // it belong to last word if not space

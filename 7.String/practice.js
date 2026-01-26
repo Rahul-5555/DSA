@@ -1,10 +1,17 @@
-var ln = function(num){
-  n = num.length -1;
-  while(n>=0){
-    if(num[n]% 2 !==0){
-      return num.substring(0,n+1);
+
+var lengthOfLastWord = function (s) {
+  let n = s.length - 1;
+  while (n >= 0) {
+    if (s[n] != " ") {
+      break;
     }
-    n--;
+    --n;
   }
-  return ""
+  let count = 0;
+  while (n >= 0) {
+    if (s[n] === " ") break;
+    --n;
+    ++count;
+  }
+  return count;
 }
