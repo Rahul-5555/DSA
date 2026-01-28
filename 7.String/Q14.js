@@ -7,10 +7,10 @@ var groupAnagram = function (strs) {
     let sortedStr = strs[i].split('').sort().join('');
 
     if (!map[sortedStr]) {
-      map[sortedStr] = [strs[i]];
+      map[sortedStr] = [strs[i]]; // new group 
     }
     else {
-      map[sortedStr].push(strs[i]);
+      map[sortedStr].push(strs[i]); // add to existing group
     }
   }
   return [...Object.values(map)];
