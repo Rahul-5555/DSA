@@ -1,17 +1,17 @@
 
-var lengthOfLastWord = function (s) {
-  let n = s.length - 1;
-  while (n >= 0) {
-    if (s[n] != " ") {
-      break;
+var groupAnagrams = function (strs) {
+
+  let map = {};
+
+  for (let i = 0; i < strs.length; i++) {
+    let sortedStr = strs[i].split('').sort().join('');
+
+    if (!map[sortedStr]) {
+      map[sortedStr] = [strs[i]]
     }
-    --n;
+    else {
+      map[sortedStr].push(strs[i]);
+    }
   }
-  let count = 0;
-  while (n >= 0) {
-    if (s[n] === " ") break;
-    --n;
-    ++count;
-  }
-  return count;
+  return [...Object.values(map)];
 }
