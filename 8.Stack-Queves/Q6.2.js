@@ -18,3 +18,14 @@ var removeOuterParentheses = function (S) {
 
 // Example usage:
 console.log(removeOuterParentheses("(()())(())"));
+
+
+
+
+
+// Time Complexity: O(n) - We traverse the string once.
+// Space Complexity: O(n) - In the worst case, the result string can be as long as the input string (if there are no outer parentheses).
+
+/*
+"Instead of using a stack which would require O(n) space, I'm using a single counter to track the nesting depth. The key insight is that outer parentheses occur at level 1 - opening when level becomes 1, closing when level returns to 0. By adding characters only when level > 1, we automatically skip all outer parentheses. This gives us O(n) time and O(1) extra space complexity."
+*/
